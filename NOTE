@@ -1,0 +1,5 @@
+refrerence git hub project  :
+                            https://github.com/docker/awesome-compose.git
+
+we have to run yml file 
+docker compose up -- to create all container
