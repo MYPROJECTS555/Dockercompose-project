@@ -3,3 +3,14 @@ refrerence git hub project  :
 
 we have to run yml file 
 docker compose up -- to create all container
+
+yml file explaination 
+Here is a breakdown of the services:
+
+redis: Uses the image 'redislabs/redismod' and exposes port 6379 on the host mapped to 6379 in the container.
+
+web1: Built from the local directory ./web, restarts on failure, has a hostname of web1, and maps host port 81 to container port 5000.
+
+web2: Same as web1 but maps host port 82 to container port 5000 and hostname web2.
+
+nginx: Built from the local directory ./nginx, exposes port 80 on the host mapped to 80 in the container, and depends on web1 and web2 (meaning Docker Compose will start web1 and web2 before nginx).
